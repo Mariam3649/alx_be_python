@@ -1,19 +1,22 @@
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-    if y == 0:
-        return "Error: Cannot divide by zero"
-    return x / y
+def perform_operation(num1, num2, operation):
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        if num2 == 0:
+            return "Error: Cannot divide by zero"
+        return num1 / num2
+    else:
+        return "Invalid operation"
 
 if __name__ == "__main__":
-    print("Addition:", add(10, 5))
-    print("Subtraction:", subtract(10, 5))
-    print("Multiplication:", multiply(10, 5))
-    print("Division:", divide(10, 5))
+    print("Addition:", perform_operation(10, 5, "add"))
+    print("Subtraction:", perform_operation(10, 5, "subtract"))
+    print("Multiplication:", perform_operation(10, 5, "multiply"))
+    print("Division:", perform_operation(10, 5, "divide"))
+    print("Divide by zero:", perform_operation(10, 0, "divide"))
+
+
