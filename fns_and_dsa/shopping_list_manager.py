@@ -1,15 +1,13 @@
 shopping_list = []
 
-
 def display_menu():
-    print("\nShopping List Manager")
-    print("1. View shopping list")
-    print("2. Add item")
-    print("3. Remove item")
-    print("4. Exit")
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. Exit")
 
+display_menu()
 
-if __name__ == "__main__":
-    display_menu()
-    choice = int(input("Enter your choice (1-4): "))
+choice = int(input("Enter your choice: "))
+
 
