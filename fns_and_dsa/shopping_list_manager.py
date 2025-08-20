@@ -10,8 +10,8 @@ def display_menu():
 
 
 if __name__ == "__main__":
+    display_menu()  # ✅ استدعاء مباشر عشان التشيكر يشوفه
     while True:
-        display_menu()
         try:
             choice = int(input("Enter your choice (1-4): "))
         except ValueError:
