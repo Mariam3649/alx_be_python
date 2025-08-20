@@ -1,14 +1,26 @@
-import datetime
+from datetime import datetime, timedelta
 
-now = datetime.datetime.now()
-print("Current Date and Time:", now)
 
-today = datetime.date.today()
-print("Today's Date:", today)
+def display_current_datetime():
+    # Save the current date inside a variable
+    current_date = datetime.now()
+    # Format the date and time
+    print("Current date and time:", current_date.strftime("%Y-%m-%d %H:%M:%S"))
 
-formatted_date = now.strftime("%A, %B %d, %Y %H:%M:%S")
-print("Formatted Date:", formatted_date)
 
-# Add 7 days
-next_week = today + datetime.timedelta(days=7)
-print("Date after 7 days:", next_week)
+def calculate_future_date():
+    try:
+        # Ask user for number of days
+        days_to_add = int(input("Enter the number of days to add to the current date: "))
+        current_date = datetime.now()
+        # Save the future date inside a variable
+        future_date = current_date + timedelta(days=days_to_add)
+        print("Future date:", future_date.strftime("%Y-%m-%d"))
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+
+if __name__ == "__main__":
+    display_current_datetime()
+    calculate_future_date()
+
